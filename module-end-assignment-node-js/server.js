@@ -3,6 +3,8 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const itemRoutes = require("./routes/itemRoutes");
+const { errorHandler } = require("./middleware/errorHandler");
+const { logRequestDetails } = require("./middleware/logger");
 
 const app = express();
 dotenv.config();
@@ -18,6 +20,8 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use(bodyParser.json());
+app.use(errorHandler);
+app.use(logRequestDetails);
 
 app.use("/items", itemRoutes);
 

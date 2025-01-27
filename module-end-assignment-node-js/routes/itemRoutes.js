@@ -13,6 +13,7 @@ const router = express.Router();
 router.get("/", getItems);
 router.get("/:id", getItemsById);
 
+// POST with data validation
 router.post(
   "/",
   [

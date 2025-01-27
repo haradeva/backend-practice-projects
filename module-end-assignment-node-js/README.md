@@ -16,3 +16,11 @@ This is a simple Node.js and Express API to manage items with CRUD operations, a
 ```bash
 npm install
 ```
+
+## API Documentation
+
+You can view the complete API documentation and interact with the API directly in Postman using the link below:
+
+[**View API Documentation in Postman**](https://documenter.getpostman.com/view/41538705/2sAYQghU5s)
+
+This documentation contains detailed information about each endpoint, request parameters, and expected responses.
